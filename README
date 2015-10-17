@@ -1,0 +1,50 @@
+FruityShell v1.0
+------------------
+Allows you to control FruityWiFi using a metasploit-ish type of shell.
+FruityWiFi needs to be up an running.
+
+
+MENU
+--------
+?                Help menu
+exit             Exit the console
+clear            Clear the console
+show modules     Show modules list
+set              Sets module status //set module/{name} start|stop
+use              Uses config|module //use module/{name}
+
+
+MENU-MODULE
+-----------
+?                Help menu
+back             Move back from current context
+clear            Clear the console
+exit             Exit the console
+start            Starts current module
+stop             Stops current module
+status           Show current module status
+show options     Show module options [to be implemented...]
+
+
+MENU-CONFIG
+-----------
+?                Help menu
+back             Move back from current context
+clear            Clear the console
+exit             Exit the console
+show options     Show config options
+set              Set config options //set {property} {value}
+
+
+CONFIG (init.conf)
+------
+[api] Setup API details (server and token) to access FruityWiFi.
+
+
+DEPENDENCIES
+------------
+apt-get -y install python-requests
+apt-get -y install python-configobj
+
+apt-get -p install python-pip
+pip install --upgrade requests
